@@ -1,0 +1,21 @@
+{
+  "name": "Chess Bulldozer",
+  "description": "A chrome extension that bulldoze tricky chess puzzles.",
+  "version": "0.0.1",
+  "background": {
+     "scripts": ["background.js", "jquery.min.js"],
+     "persistent": false
+   },
+  "permissions": [
+    "activeTab",
+    "http://localhost/"
+  ],
+  "browser_action": {
+      "default_title": "Chess Bulldozer",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": ["inject.js", "chess.min.js"]
+}
